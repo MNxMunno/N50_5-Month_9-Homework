@@ -146,7 +146,7 @@ header nav .nav_items button p:hover {
     display: block;
   }
 }
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 444px) {
   header {
     border-radius: 0 0 30px 30px;
   }
