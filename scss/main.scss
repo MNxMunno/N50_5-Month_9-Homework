@@ -10,7 +10,156 @@
   margin: 0 auto;
 }
 
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 100;
+  padding: 20px 0;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    .logo {
+      .logo-A {
+        display: none;
+      }
+    }
+
+    .nav-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      .nav-category {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 0;
+        background: #008dff;
+        padding: 5px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover {
+          background: #006ac0;
+        }
+        span {
+          color: #fff;
+          font-family: sans-serif;
+          font-size: 16px;
+        }
+      }
+      .form {
+        display: flex;
+        align-items: center;
+        input {
+          width: 100%;
+          outline: none;
+          border: 2px solid #008dff;
+          padding: 5px 15px;
+          font-size: 16px;
+          border-radius: 8px 0 0 8px;
+        }
+        button {
+          border-radius: 0px 8px 8px 0px;
+          background: #008dff;
+          transition: 0.4s;
+          color: #fff;
+          padding: 5px;
+          border: 2px solid #008dff;
+          font-family: sans-serif;
+          font-size: 16px;
+          cursor: pointer;
+          &:hover {
+            background: #006ac0;
+            border: 2px solid #006ac0;
+          }
+        }
+      }
+    }
+    .nav_items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      button {
+        transition: 0.4s;
+        &:hover {
+          svg {
+            fill: #008dff;
+            stroke: #008dff;
+          }
+          p {
+            color: #008dff;
+          }
+        }
+        svg {
+          fill: #000;
+          stroke: #000;
+          transition: 0.4s;
+          &:hover {
+            fill: #008dff;
+            stroke: #008dff;
+          }
+        }
+        #cart {
+          fill: none;
+        }
+        p {
+          font-family: sans-serif;
+          transition: 0.4s;
+          font-weight: 500;
+          &:hover {
+            color: #008dff;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1111px) {
+    nav {
+      .nav_items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 100;
+        padding: 15px 10px;
+      }
+    }
+  }
+  @media only screen and (max-width: 606px) {
+    nav {
+      .logo {
+        .logo-asaxiy {
+          display: none;
+        }
+        .logo-A {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 main {
+  padding: 120px 0;
+  background: #f4f7fd;
   .products {
     .loads {
       display: flex;
@@ -122,7 +271,9 @@ main {
       .card {
         padding: 10px;
         width: 240px;
-        border: 1px solid #000;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0.5px 0.5px 10px rgba(134, 134, 134, 0.125);
         .img {
           width: 220px;
           height: 190px;
@@ -135,6 +286,14 @@ main {
           display: flex;
           align-items: start;
           justify-content: space-between;
+          .new {
+            background: red;
+            color: #fff;
+            font-family: sans-serif;
+            padding: 4px 5px 2px;
+            border-radius: 8px;
+            text-transform: uppercase;
+          }
           .heart {
             cursor: pointer;
           }
@@ -152,15 +311,86 @@ main {
           font-weight: 800;
           cursor: pointer;
           transition: 0.4s;
+
           &:hover {
             color: rgb(18, 180, 250);
           }
         }
-        .price {
-          font-size: 24px;
-          font-weight: 900;
-          color: rgb(18, 180, 250);
+        .price-rate {
+          padding: 0 15px 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .price {
+            font-size: 24px;
+            font-weight: 900;
+            color: rgb(18, 180, 250);
+            font-family: sans-serif;
+            padding: 15px 0;
+          }
+          .rating {
+            font-family: sans-serif;
+            font-weight: 900;
+          }
+        }
+        .description {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
           font-family: sans-serif;
+          text-transform: capitalize;
+          font-size: 14px;
+        }
+        .category {
+          font-family: sans-serif;
+          color: #bf0000;
+          padding: 10px 0;
+          font-weight: 600;
+          text-transform: uppercase;
+          font-size: 12px;
+          b {
+            color: #111;
+            text-transform: capitalize;
+          }
+        }
+        .card-btns {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .sale {
+            width: 180px;
+            border: 0;
+            background: #008dff;
+            color: #fff;
+            transition: 0.4s;
+            cursor: pointer;
+            padding: 8px 20px;
+            border-radius: 12px;
+            font-family: sans-serif;
+            font-size: 14px;
+            &:hover {
+              background: #006ac0;
+            }
+          }
+
+          .btn-cart {
+            background: #00bfaf;
+            padding: 5px 15px;
+            border-radius: 12px;
+            border: 0;
+            cursor: pointer;
+            transition: 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              background: #03978b;
+            }
+            .cart {
+              fill: #fff;
+            }
+          }
         }
       }
     }

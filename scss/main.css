@@ -10,6 +10,146 @@
   margin: 0 auto;
 }
 
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 100;
+  padding: 20px 0;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+header nav .logo .logo-A {
+  display: none;
+}
+header nav .nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+header nav .nav-items .nav-category {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: #008dff;
+  padding: 5px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+header nav .nav-items .nav-category:hover {
+  background: #006ac0;
+}
+header nav .nav-items .nav-category span {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+header nav .nav-items .form {
+  display: flex;
+  align-items: center;
+}
+header nav .nav-items .form input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #008dff;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 8px 0 0 8px;
+}
+header nav .nav-items .form button {
+  border-radius: 0px 8px 8px 0px;
+  background: #008dff;
+  transition: 0.4s;
+  color: #fff;
+  padding: 5px;
+  border: 2px solid #008dff;
+  font-family: sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+header nav .nav-items .form button:hover {
+  background: #006ac0;
+  border: 2px solid #006ac0;
+}
+header nav .nav_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+header nav .nav_items button {
+  transition: 0.4s;
+}
+header nav .nav_items button:hover svg {
+  fill: #008dff;
+  stroke: #008dff;
+}
+header nav .nav_items button:hover p {
+  color: #008dff;
+}
+header nav .nav_items button svg {
+  fill: #000;
+  stroke: #000;
+  transition: 0.4s;
+}
+header nav .nav_items button svg:hover {
+  fill: #008dff;
+  stroke: #008dff;
+}
+header nav .nav_items button #cart {
+  fill: none;
+}
+header nav .nav_items button p {
+  font-family: sans-serif;
+  transition: 0.4s;
+  font-weight: 500;
+}
+header nav .nav_items button p:hover {
+  color: #008dff;
+}
+@media only screen and (max-width: 1111px) {
+  header nav .nav_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 100;
+    padding: 15px 10px;
+  }
+}
+@media only screen and (max-width: 606px) {
+  header nav .logo .logo-asaxiy {
+    display: none;
+  }
+  header nav .logo .logo-A {
+    display: block;
+  }
+}
+
+main {
+  padding: 120px 0;
+  background: #f4f7fd;
+}
 main .products .loads {
   display: flex;
   align-items: center;
@@ -109,7 +249,9 @@ main .products .cards {
 main .products .cards .card {
   padding: 10px;
   width: 240px;
-  border: 1px solid #000;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0.5px 0.5px 10px rgba(134, 134, 134, 0.125);
 }
 main .products .cards .card .img {
   width: 220px;
@@ -123,6 +265,14 @@ main .products .cards .card .top-btns {
   display: flex;
   align-items: start;
   justify-content: space-between;
+}
+main .products .cards .card .top-btns .new {
+  background: red;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 4px 5px 2px;
+  border-radius: 8px;
+  text-transform: uppercase;
 }
 main .products .cards .card .top-btns .heart {
   cursor: pointer;
@@ -144,9 +294,78 @@ main .products .cards .card h3 {
 main .products .cards .card h3:hover {
   color: rgb(18, 180, 250);
 }
-main .products .cards .card .price {
+main .products .cards .card .price-rate {
+  padding: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .products .cards .card .price-rate .price {
   font-size: 24px;
   font-weight: 900;
   color: rgb(18, 180, 250);
   font-family: sans-serif;
+  padding: 15px 0;
+}
+main .products .cards .card .price-rate .rating {
+  font-family: sans-serif;
+  font-weight: 900;
+}
+main .products .cards .card .description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+main .products .cards .card .category {
+  font-family: sans-serif;
+  color: #bf0000;
+  padding: 10px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+main .products .cards .card .category b {
+  color: #111;
+  text-transform: capitalize;
+}
+main .products .cards .card .card-btns {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .products .cards .card .card-btns .sale {
+  width: 180px;
+  border: 0;
+  background: #008dff;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+main .products .cards .card .card-btns .sale:hover {
+  background: #006ac0;
+}
+main .products .cards .card .card-btns .btn-cart {
+  background: #00bfaf;
+  padding: 5px 15px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .products .cards .card .card-btns .btn-cart:hover {
+  background: #03978b;
+}
+main .products .cards .card .card-btns .btn-cart .cart {
+  fill: #fff;
 }/*# sourceMappingURL=main.css.map */
