@@ -155,19 +155,23 @@ header {
       }
     }
   }
-  @media only screen and (max-width: 404px) {
-    nav {
-      .nav-items {
-        .form {
-          display: none;
+  @media only screen and (max-width: 435px) {
+    & {
+      border-radius: 0 0 50px 50px;
+      nav {
+        .nav-items {
+          .form {
+            display: none;
+          }
         }
-      }
-      .nav_items {
-        .btn-scales {
-          display: none;
-        }
-        .btn-like {
-          display: none;
+        .nav_items {
+          border-radius: 50px 50px 0 0;
+          .btn-scales {
+            display: none;
+          }
+          .btn-like {
+            display: none;
+          }
         }
       }
     }
