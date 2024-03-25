@@ -23,7 +23,9 @@ button {
   border: 0;
   background: transparent;
 }
-
+a {
+  text-decoration: none;
+}
 header {
   position: fixed;
   top: 0;
@@ -38,6 +40,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    padding-bottom: 20px;
     .logo {
       .logo-A {
         display: none;
@@ -95,6 +98,9 @@ header {
           }
         }
       }
+      .btn-search {
+        display: none;
+      }
     }
     .nav_items {
       display: flex;
@@ -135,6 +141,57 @@ header {
       }
     }
   }
+  .head-bottom {
+    border-top: 1px solid #ccc;
+    padding: 15px 0 0;
+    .head-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+
+      .ramadan {
+        width: 146px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #282830;
+        transition: 0.4s;
+        &:hover {
+          color: #008dff;
+        }
+        img {
+          width: 32px;
+        }
+      }
+      .items {
+        width: 1100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+        .head-bottom-link {
+          font-family: sans-serif;
+          font-size: 20px;
+          color: #282830;
+          transition: 0.4s;
+
+          &:hover {
+            color: #008dff;
+          }
+        }
+      }
+      .btn-burger {
+        display: none;
+      }
+      .btn-burger.burger {
+        display: block;
+      }
+    }
+  }
   @media only screen and (max-width: 1111px) {
     nav {
       .nav_items {
@@ -149,6 +206,30 @@ header {
         background: #fff;
         z-index: 100;
         padding: 15px 10px;
+      }
+    }
+  }
+  @media only screen and (max-width: 959px) {
+    .head-bottom {
+      position: relative;
+      .head-items {
+        .items {
+          position: absolute;
+          flex-direction: column;
+          background: #f2f2f2;
+          width: 300px;
+          padding: 10px;
+          right: -400px;
+          top: 70px;
+          transition: 0.4s;
+          opacity: 0.9;
+        }
+        .items.show {
+          right: 0;
+        }
+        .btn-burger {
+          display: block;
+        }
       }
     }
   }
@@ -172,6 +253,9 @@ header {
           .form {
             display: none;
           }
+          .btn-search {
+            display: block;
+          }
         }
         .nav_items {
           border-top: 1px solid #ccc;
@@ -181,6 +265,13 @@ header {
           }
           .btn-like {
             display: none;
+          }
+        }
+      }
+      .head-bottom {
+        .head-items {
+          .items {
+            width: 100%;
           }
         }
       }
@@ -441,7 +532,4 @@ main {
 
 .backtop.show {
   bottom: 80px;
-}
-
-@media screen {
 }

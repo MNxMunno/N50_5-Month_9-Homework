@@ -24,6 +24,10 @@ button {
   background: transparent;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -39,6 +43,7 @@ header nav {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  padding-bottom: 20px;
 }
 header nav .logo .logo-A {
   display: none;
@@ -95,6 +100,9 @@ header nav .nav-items .form button:hover {
   background: #006ac0;
   border: 2px solid #006ac0;
 }
+header nav .nav-items .btn-search {
+  display: none;
+}
 header nav .nav_items {
   display: flex;
   align-items: center;
@@ -131,6 +139,55 @@ header nav .nav_items button p {
 header nav .nav_items button p:hover {
   color: #008dff;
 }
+header .head-bottom {
+  border-top: 1px solid #ccc;
+  padding: 15px 0 0;
+}
+header .head-bottom .head-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+header .head-bottom .head-items .ramadan {
+  width: 146px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #282830;
+  transition: 0.4s;
+}
+header .head-bottom .head-items .ramadan:hover {
+  color: #008dff;
+}
+header .head-bottom .head-items .ramadan img {
+  width: 32px;
+}
+header .head-bottom .head-items .items {
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+header .head-bottom .head-items .items .head-bottom-link {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #282830;
+  transition: 0.4s;
+}
+header .head-bottom .head-items .items .head-bottom-link:hover {
+  color: #008dff;
+}
+header .head-bottom .head-items .btn-burger {
+  display: none;
+}
+header .head-bottom .head-items .btn-burger.burger {
+  display: block;
+}
 @media only screen and (max-width: 1111px) {
   header nav .nav_items {
     display: flex;
@@ -144,6 +201,28 @@ header nav .nav_items button p:hover {
     background: #fff;
     z-index: 100;
     padding: 15px 10px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  header .head-bottom {
+    position: relative;
+  }
+  header .head-bottom .head-items .items {
+    position: absolute;
+    flex-direction: column;
+    background: #f2f2f2;
+    width: 300px;
+    padding: 10px;
+    right: -400px;
+    top: 70px;
+    transition: 0.4s;
+    opacity: 0.9;
+  }
+  header .head-bottom .head-items .items.show {
+    right: 0;
+  }
+  header .head-bottom .head-items .btn-burger {
+    display: block;
   }
 }
 @media only screen and (max-width: 606px) {
@@ -161,6 +240,9 @@ header nav .nav_items button p:hover {
   header nav .nav-items .form {
     display: none;
   }
+  header nav .nav-items .btn-search {
+    display: block;
+  }
   header nav .nav_items {
     border-top: 1px solid #ccc;
     border-radius: 30px 30px 0 0;
@@ -170,6 +252,9 @@ header nav .nav_items button p:hover {
   }
   header nav .nav_items .btn-like {
     display: none;
+  }
+  header .head-bottom .head-items .items {
+    width: 100%;
   }
 }
 

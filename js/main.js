@@ -83,3 +83,12 @@ window.addEventListener("scroll", () => {
     backTop.classList.remove("show");
   }
 });
+
+////////////// B U R G E R  ////////////////
+
+const btnBurger = document.querySelector(".btn-burger");
+const items = document.querySelector(".items");
+
+btnBurger.addEventListener("click", () => {
+  items.classList.toggle("show");
+});
