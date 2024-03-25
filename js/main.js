@@ -71,3 +71,15 @@ form.addEventListener("submit", (e) => {
     search.value = "";
   });
 });
+
+///////////// B A C K T O P ///////////
+
+const backTop = document.querySelector(".backtop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 150) {
+    backTop.classList.add("show");
+  } else {
+    backTop.classList.remove("show");
+  }
+});
