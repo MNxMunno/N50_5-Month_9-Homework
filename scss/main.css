@@ -35,7 +35,7 @@ header {
   right: 0;
   background: #fff;
   z-index: 100;
-  padding: 20px 0;
+  padding: 15px 0;
   box-shadow: 3px 3px 5px rgba(135, 135, 135, 0.2);
 }
 header nav {
@@ -259,7 +259,7 @@ header .head-bottom .head-items .btn-burger.burger {
 }
 
 main {
-  padding: 120px 0;
+  padding: 160px 0;
   background: #f4f7fd;
 }
 main .products .loads {

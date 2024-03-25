@@ -23,9 +23,11 @@ button {
   border: 0;
   background: transparent;
 }
+
 a {
   text-decoration: none;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -33,7 +35,7 @@ header {
   right: 0;
   background: #fff;
   z-index: 100;
-  padding: 20px 0;
+  padding: 15px 0;
   box-shadow: 3px 3px 5px rgba(135, 135, 135, 0.2);
   nav {
     display: flex;
@@ -280,7 +282,7 @@ header {
 }
 
 main {
-  padding: 120px 0;
+  padding: 160px 0;
   background: #f4f7fd;
   .products {
     .loads {
