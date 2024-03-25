@@ -147,13 +147,13 @@ header nav .nav_items button p:hover {
 }
 @media only screen and (max-width: 435px) {
   header {
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 40px 40px;
   }
   header nav .nav-items .form {
     display: none;
   }
   header nav .nav_items {
-    border-radius: 50px 50px 0 0;
+    border-radius: 40px 40px 0 0;
   }
   header nav .nav_items .btn-scales {
     display: none;
