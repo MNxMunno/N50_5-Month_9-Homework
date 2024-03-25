@@ -145,6 +145,17 @@ header nav .nav_items button p:hover {
     display: block;
   }
 }
+@media only screen and (max-width: 404px) {
+  header nav .nav-items .form {
+    display: none;
+  }
+  header nav .nav_items .btn-scales {
+    display: none;
+  }
+  header nav .nav_items .btn-like {
+    display: none;
+  }
+}
 
 main {
   padding: 120px 0;

@@ -155,6 +155,23 @@ header {
       }
     }
   }
+  @media only screen and (max-width: 404px) {
+    nav {
+      .nav-items {
+        .form {
+          display: none;
+        }
+      }
+      .nav_items {
+        .btn-scales {
+          display: none;
+        }
+        .btn-like {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 main {
